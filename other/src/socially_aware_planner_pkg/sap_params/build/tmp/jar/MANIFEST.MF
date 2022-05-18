@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Export-Package: se.oru.socially_aware_planner_pkg.sap_params;version="
+ 0.1.0";uses:="org.ros.namespace,org.ros.node"
+Bundle-SymbolicName: se.oru.socially_aware_planner_pkg.sap_params
+Bundle-Version: 0.1.0
+Bundle-Name: sap_params
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1508841811000
+Import-Package: org.ros.concurrent,org.ros.namespace,org.ros.node
+Created-By: 1.8.0_151 (Oracle Corporation)
+Tool: Bnd-2.1.0.20130426-122213
+

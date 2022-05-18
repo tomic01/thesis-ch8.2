@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>se.oru.socially_aware_planner_pkg</groupId>
+  <artifactId>sap_params</artifactId>
+  <version>0.1.0</version>
+  <versioning>
+    <versions>
+      <version>0.1.0</version>
+    </versions>
+    <lastUpdated>20171024114404</lastUpdated>
+  </versioning>
+</metadata>

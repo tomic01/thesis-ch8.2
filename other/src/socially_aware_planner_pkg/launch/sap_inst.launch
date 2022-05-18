@@ -1,0 +1,22 @@
+<launch>
+  <arg name="domain_name" default="theGame.ddl"/>
+
+  <node name="socially_aware_planner" 
+	pkg="socially_aware_planner_pkg"
+	type="runnerInstitutions.sh"
+	args="se.oru.socially_aware_planner_pkg.im.action.InstitutionNode"
+	output="screen">
+  </node>
+
+  <node name="sap_params" 
+	pkg="socially_aware_planner_pkg" 
+	type="sap_params.sh"
+	args="se.oru.socially_aware_planner_pkg.sap_params.SapParams"
+	output="screen">
+
+	<param name="sap_pkg_path" value="$(find socially_aware_planner_pkg)" />
+	<param name="domain" value="$(find socially_aware_planner_pkg)/domains/$(arg domain_name)" type="str" />
+	<rosparam command="load" file="$(find socially_aware_planner_pkg)/config/sap_config.yaml"/>
+  </node>
+
+</launch>

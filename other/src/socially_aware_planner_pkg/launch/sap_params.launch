@@ -1,0 +1,10 @@
+<launch>
+  <node name="sap_params" 
+	pkg="socially_aware_planner_pkg" 
+	type="sap_params.sh"
+	args="se.oru.socially_aware_planner_pkg.sap_params.SapParams"
+	output="screen">
+
+	<rosparam command="load" file="$(find socially_aware_planner_pkg)/config/sap_config.yaml"/>
+  </node>
+</launch>

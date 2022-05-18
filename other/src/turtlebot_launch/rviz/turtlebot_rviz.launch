@@ -1,0 +1,3 @@
+<launch>
+  <node ns="turtlebot_1" name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_launch)/rviz/turtlebot_1_rviz.rviz"/>
+</launch>

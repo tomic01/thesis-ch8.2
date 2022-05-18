@@ -1,0 +1,19 @@
+<launch>
+
+<arg name="robot_name" default="turtlebot_1"/>
+
+<group ns="$(arg robot_name)">
+
+ <node name="sound_play"
+       pkg="sound_play"
+       type="soundplay_node.py">
+ </node>
+
+ <node name="say_word"
+       pkg="say_word"
+       type="say_word_node">
+ </node>
+
+</group>
+
+</launch>

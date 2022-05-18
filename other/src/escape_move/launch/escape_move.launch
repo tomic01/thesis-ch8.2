@@ -1,0 +1,16 @@
+<launch>
+
+<arg name="robot_name" default="turtlebot_1"/>
+
+<group ns="$(arg robot_name)">
+
+ <node 
+      ns = "turtlebot_1"
+      name="escape_move"
+      pkg="escape_move"
+      type="escape_move_node">
+ </node>
+
+</group>
+
+</launch>

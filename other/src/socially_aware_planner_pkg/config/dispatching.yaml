@@ -1,0 +1,132 @@
+# This behavior displays menu on the robot screen
+# from which user can choose current storyboard (institution)
+display_menu:
+   gbm_name: dispatchca
+   resources:
+    - RNAV
+    - RScreen
+   parametars:
+    - key: activated_cas
+      value: ca01
+    - key: question_to_user
+      value: select_storyboard
+
+# Goes to the person and scans its rfid
+get_rfid:
+   gbm_name: getrfid
+   resources:
+    - RNAV
+   parametars:
+      - key: Tracker_slot
+        value: People_Localization_Tracker_2
+   # additional key and value about person camera ID will be added py the planner
+
+lead_child_to_classroom:
+   gbm_name: gotolocation
+   resources:
+     - RNAV
+   parametars:
+     - key: location
+       value: classroom_isr
+
+goto_classroom:
+   gbm_name: gotolocation
+   resources:
+     - RNAV
+   parametars:
+     - key: location
+       value: classroom_isr
+
+#lead_child_to_classroom:
+#   gbm_name: lead
+#   resources:
+#    - RNAV
+#    - RScreen
+#    - RVocSnd
+#   parametars:
+#    - key: camera_id
+#      value: 1003
+#    - key: x
+#      value: 6.15
+#    - key: y
+#      value: 13.50
+#    - key: theta
+#      value: 0.39
+#    - key: rfid_tag
+#      value: 123
+
+# Robot and a human playing a game
+interactive_game:
+   gbm_name: interactivegame
+   resources:
+    - RNAV
+    - RLED
+    - PerceptComp
+    - RArmMotion
+    - RHeadMotion
+    - RScreen
+    - RVocSnd
+   parametars:
+    - key: players
+      value: human1 mbot05
+    - key: rows
+      value: 3
+    - key: cols
+      value: 4
+    - key: level
+      value: 1
+    - key: tracking
+      value: 1
+    - key: interaction
+      value: verbal
+
+# Teaching assistance behavior
+teaching_assistant:
+   gbm_name: teachingassistance
+   resources:
+    - RNAV
+    - RScreen
+    - RHeadMotion
+    - RVideoPrj
+    - RVocSnd
+   parametars:
+
+# Tell the child to go to classroom
+tell_child_to_go_to_classroom:
+   gbm_name: dispatchca
+   resources:
+    - RScreen
+   parametars:
+    - key: activated_cas
+      value: ca08
+
+# Patrolling
+patroll:
+   gbm_name: patrolling
+   resources:
+    - RNAV
+   parametars:
+
+
+# Ask quizz questions
+
+quiz:
+   gbm_name: taquiz
+   resources:
+    - RScreen
+    - RVocSnd
+   parametars:
+
+
+# ask_qa8:
+#   gbm_name: dispatchca
+#   resources:
+#    - RScreen
+#    - RVocSnd
+#   parametars:
+#    - key: activated_cas
+#      value: ca01
+#    - key: question_to_user
+#      value: ta_quiz_question
+#    - key: question_id
+#      value: question_math
